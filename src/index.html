@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/blocks/style.min.css" />
   </head>
   <body>
-    <section class="promo">
+    <section id="up" class="promo">
       <div class="container">
         <header class="header">
           <a href="#" class="header__logo">
@@ -26,7 +26,7 @@
 
           <div class="header__contacts">
             <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a>
-            <button class="button">заказать звонок</button>
+            <button data-modal="consultation" class="button">заказать звонок</button>
           </div>
         </header>
         <div class="promo__wrapper">
@@ -37,7 +37,7 @@
             <div class="promo__icon"><img src="./img/promo_2.png" alt="card" />Бесплатная доставка</div>
             <div class="promo__icon"><img src="./img/promo_3.png" alt="message" />Ответим на все вопросы</div>
           </div>
-          <button class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
+          <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
           <div class="promo__link">
             или
             <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -59,8 +59,8 @@
             занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!
           </div>
           <div class="benefits__benefit">
-            <img src="./img/shoe.png" alt="shoe" /><span>Учим бегать</span> Помогаем с обучением правильной технике
-            бега! Дружим с крупнейшей школой бега в России - I LOVE RUNNING.
+            <img src="./img/shoe.png" alt="shoe" class="benefits__benefit__heart" /><span>Учим бегать</span> Помогаем с
+            обучением правильной технике бега! Дружим с крупнейшей школой бега в России - I LOVE RUNNING.
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@
             <div class="catalog-item__wrapper">
               <div class="catalog-item__content catalog-item__content_active">
                 <img src="./img/product.png" alt="product" class="catalog-item__img" />
-                <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                <div class="catalog-item__subtitle">Пульсометр Polar FT2</div>
                 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                 <a href="#" class="catalog-item__link">Подробнее</a>
               </div>
@@ -361,5 +361,39 @@
         <div class="footer__tel"><a href="tel:8499928974">8 (499) 922-89-74</a></div>
       </div>
     </footer>
+
+    <div class="overlay">
+      <div class="modal" id="consultation">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Просто заполните форму заявки</div>
+        <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+        <form class="feed-form feed-form_mt25" action="#">
+          <input name="name" required placeholder="Ваше имя" type="text" />
+          <input name="phone" required placeholder="Ваше телефон" type="text" />
+          <input name="email" required placeholder="Ваше E-mail" type="email" />
+          <button class="button button_submit">заказать консультацию</button>
+        </form>
+      </div>
+
+      <div class="modal" id="order">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Ваш заказ:</div>
+        <div class="modal__descr"></div>
+        <form class="feed-form feed-form_mt25" action="#">
+          <input name="name" required placeholder="Ваше имя" type="text" />
+          <input name="phone" required placeholder="Ваше телефон" type="text" />
+          <input name="email" required placeholder="Ваше E-mail" type="email" />
+          <button class="button button_submit">купить</button>
+        </form>
+      </div>
+
+      <div class="modal modal_mini" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+        <div class="modal__descr">Наш менеджер скоро свяжеться с вами!</div>
+      </div>
+    </div>
+
+    <a href="#up" class="pageup"><img src="./img/pageup.svg" alt="up" /></a>
   </body>
 </html>
