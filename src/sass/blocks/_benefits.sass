@@ -20,8 +20,14 @@
     font-weight: 300
     font-size: 14px
     line-height: 18px
-    img
-      max-width: 70px
+    &__heart
+      animation-name: heartBeat
+      animation-duration: .2s 
+      animation-timing-function: eas-in
+      animation-iteration-count: infinite
+      &:hover
+        animation-play-state: paused
+    
     span
       margin-top: 35px
       margin-bottom: 20px
